@@ -1,0 +1,221 @@
+Read these instructions: In the following questions,  check all listed assertions that appear to be correct, or enter an  integer value if required.
+I. The Chewy Center of the Internet
+
+Recall that the count­-to-­infinity problem in distance vector routing is when a change in the topology causes/powoduje/ nodes to form a loop. The nodes break out of the loop only once their costs count high enough to choose a different route.
+
+A. Can decreasing the routing cost of a link cause the count-to-infinity problem?
+Yes, a decreasing link cost can cause the count­-to-infinity problem.
+No, a decreasing link cost cannot cause the count­-to-infinity problem.
+- unanswered
+
+B. Can removing a link cause the count-to-infinity problem?
+Yes, removing a link can cause the count-to-infinity problem
+No, removing a link cannot cause the count-to-infinity problem
+- unanswered
+
+C. Can increasing the routing cost of a link cause the count­-to-­infinity problem?
+Yes, increasing the routing cost of a link can cause the count­-to-­infinity problem.
+No, increasing the routing cost of a link cannot cause the count­--to­-infinity problem.
+- unanswered
+
+D. Can removing a vertex from the graph cause the count­-to-­infinity problem?
+Yes, removing a vertex from the graph can cause the count-­to-infinity problem.
+No, removing a vertex from the graph cannot cause the count-­to-infinity problem.
+- unanswered
+
+E. Recall that BGP uses a modification of distance vector routing called path vector routing. where route advertisements include the full AS path. Can a router detect some potential routing loops by examining only a path vector?
+Yes, using only a path vector a router can detect some loops.
+No, a path vector alone has insufficient information to detect any loops.
+- unanswered
+
+F. An AS chooses to route packets for a specific prefix to another AS based on the path this second AS advertised for that prefix. Is it assured that all packets to that prefix will follow that advertised AS path to the destination?
+Yes, all packets sent to that prefix will traverse the AS path the other AS advertised.
+No, packets sent to that prefix may traverse a different AS path.
+- unanswered
+
+G. AS number 144 has two border routers BR1 and BR2. BR1 peers with AS 555. BR2 peers with AS 1977. BR1 receives a route advertisement from AS 555 for prefix 128.15.0.0/16, with path 78 11101 6294 555 555. The double listing  of 555 is correct; it’s a way for 555 to make the path seem “longer.” Is BR2  required to advertise a route to this prefix to AS 1977?
+Yes, BR2 is required to advertise a route to AS 1977 for 128.15.0.0/16.
+No, BR2 is not required to advertise a route to AS 1977 for 128.15.0.0/16.
+- unanswered
+
+H. Assuming that BR2 decides to advertise a route to the prefix  128.15.0.0/16, which of the following are valid route advertisements? AS  144 may have received advertisements from other ASes but received no other advertisements for that prefix from AS 555. Check all that are valid.
+128.15.0.0/16 6294 144
+128.15.0.0/16 555 144
+128.15.0.0/16 78 11101 6294 555
+128.15.0.0/16 78 11101 6294 555 144
+128.15.0.0/16 78 11101 6294 555
+128.15.0.0/16 78 11101 6294 555 555 144 144
+128.15.0.0/16 78 78 144 144
+128.15.0.0/16 64393 144 144
+- unanswered
+
+I. Which of the following statements are true?
+Max-min fairness is the only notion of fairness.
+Max-min fairness always divides link bandwidth equally among flows traversing a network.
+An allocation of rates to flows that is max-min fair may not maximize the total throughput of flows in the network.
+In a network with only one router and for which every flow can saturate the bottleneck link on its own, max-min fairness divides link bandwidth equally among flows traversing the bottleneck link.
+- unanswered
+
+J. An Internet backbone link between San Francisco (SF) and New York (NY) has a data rate of 1Gb/s and an RTT of 100ms. A TCP flow starts from a host at SF to a receiver at NY. The receiver’s advertized window is never larger than 1MB. What is the maximum rate achievable by the sender?Which of the following statements are true?
+~40Mb/s
+~80Mb/s
+~98Mb/s
+~0.83Gb/s
+~980Mb/s
+- unanswered
+II. What's in a Name?
+
+A. Suppose you query a root name server for an A record for www.facebook.com. What is the most likely reply?
+An answer section including a single A record for www.facebook.com.
+An authority section including an NS record for facebook.com  and an additional section containing an A record for the named host.
+An answer section including more than one A record for www.facebook.com
+An authority section of one or more NS records for .com name  servers and no additional section.
+An answer section of one or more NS records for .com name servers and  an additional section of NS records for other root servers.
+An authority section of one or more NS records for .com name servers  and an additional section of A records for those name servers.
+- unanswered
+
+B. Your friend has hired a service to serve DNS records for her domain. She  almost immediately adds an A record to her domain and finds that she can look it up immediately. She does not share the name with anyone and so no one else ever looks it up. A few weeks later, you two are in a home with a broadband connection and are both connecting to the Internet through its WiFi network. She checks that DNS is still working correctly by looking up the name, then modifies the A record to have a different IP address. She looks up the name again and finds that lookups are still going to the old address. She tries several more times, then tries with your computer.  In all cases the query returns the old address. She asks you what is wrong. Which answer is the most likely cause?
+The DNS provider has updated its database but your friend's DNS resolver still has the old A resource record whose TTL hasn't expired.
+All of the computers have cached A records for the name whose TTL has not expired.
+The DNS provider has updated its database but is waiting for the TTL on the existing A record to expire before updating it.
+The DNS provider, now safe that she's a customer, is being lazy and not quickly updating its database.
+- unanswered
+
+C. You issue a recursive query for www.stanford.edu directly to the DNS root servers (you do not use a resolver). Which of the following are likely to be true about the response? Check all that apply.
+The response will include an A record for www.stanford.edu
+The response will include an NS record for the .edu  domain
+The response will include an A record for root name servers.
+The response will have the RA bit set in its header.
+The response will have the TC bit set in its header.
+The response will have the RD bit set in its header.
+- unanswered
+
+D. Assuming a resolver has no cache, looking up the A record for a name such  as  www.stanford.edu requires talking to several servers. A more  efficient solution would be to have a large unified database for name  lookup so you only have to contact one server. Why  does DNS use a hierarchy? Check all that apply.
+Each domain can have its own name servers, distributing management and control.
+Host names initially mirrored the IP address hierarchy, so having a hierarchy of names would match  this structure well.
+Network file sharing was an early application for the Internet, and a hierarchy of names resembles the hierarchy of folders and files. NS records represent directories and A records represent files.
+Building one large database that is robust to node failures is more difficult than a distributed solution where node failures only hurt one subset of the namespace.
+It distributes load across the servers responsible for different subtrees and levels.
+Because the Internet was intended to have centralized control by ARPA, a hierarchy allowed ARPA to control the root of the name system and therefore the Internet.
+Jon Postel didn't want any responsibility but everyone else wanted him in charge, so they designed a system that required a central administrator and convinced him to take the job.
+- unanswered
+III. Here, There, Everwhere
+
+A. Which of the following CIDR blocks cover the address 171.15.66.234?  Check all that apply.
+128.0.0.0/1
+128.0.0.0/2
+171.15.0.0/16
+171.15.0.0/17
+171.15.0.0/18
+171.16.55.128/26
+171.15.66.0/28
+171.15.66.234/32
+- unanswered
+
+B. True or false: IPv6 addresses are in short supply.
+True
+False
+- unanswered
+
+C. True or false: using DHCP is the only way for a host to obtain an IP address today in the Internet.
+True
+False
+- unanswered
+
+D. True or false: because it uses a link layer broadcast, in order  to receive a response a node  using DHCP must be on the same  link as its DHCP server.
+True
+False
+- unanswered
+
+E. True or false: because DHCP uses link ­layer broadcasts, the IP gateway for a subnet must also be a DHCP server.
+True
+False
+- unanswered
+
+F. DHCP is a layer 3 (network layer) protocol
+True
+False
+- unanswered
+
+G. Mark all of the following that are syntactically valid IPv6 addresses:
+2001:470::806d:1::9
+64:ff9b::171.66.3.9
+65:aagg:54::22:12.44.11.99
+dead:beef:10:10.44.12.22::9
+fe80::6aa8:6dff:fe05:8522
+fe80::213:72ff:fe4c:d96a
+- unanswered
+
+H. True or false: It is considered good practice for Network Address Translators to map a single external IP/port pair to multiple internal IP/port pairs.
+True
+False
+- unanswered
+
+I. True or false: Network Address Translators cannot be layered. I.e., if you have two layers of NAT between a pair of hosts, all IP communication will break.
+True
+False
+- unanswered
+IV. Getting from Here to There
+
+A. The next questions are based on the figure of the network below  connecting AS1, AS2, AS3, AS4 and AS5. End host X connects to Ethernet switch B (e.g. in the wiring closet of a building which in turn connect to the routers inside  AS1 (e.g. campus backbone routers), which in turn connects to the public  Internet provider AS2 via BGP router B1.
+
+B. If Ethernet switches A-­F run the Spanning Tree Protocol (remember all links have the same cost), and A is the root of the spanning tree, which of the following statements are true?
+Packets from X to Y will travel along the path B­A­D. B­C­D is not part of the spanning tree rooted at A, and so packets will flow via A.
+Packets from A­D will travel indefinitely around the loop A­D­E­F­A, unless the TTL expires.
+If switch A fails, X will no longer be able to communicate with Y.
+All of the links between the switches will be used to forward regular data packets.
+A-­F will learn link state information from routers R1­R6 and optimize the spanning tree between the switches accordingly.
+- unanswered
+
+C. AS1 uses OSPF to route packets internally using the link weights shown.  BGP router B1 also  takes part in the OSPF routing algorithm for AS1.
+
+D. Assume the link from R4­R3 fails, what is the shortest path now from R4 to B1?
+R4­-R5-­R3-­B1
+R4­-R2-­R1-­B1
+R4-R6-R5-R3-B1
+R4-R2-R1-R3-B1
+R4-R5-R3-R1-B1
+- unanswered
+
+E. If AS1 uses default routing, do routers R1-R6 contain separate routing entries for prefixes in AS4 and AS5?
+Yes
+No
+- unanswered
+
+F. Can B7 aggregate prefixes for AS5 before advertising them to AS3 and AS2?
+Yes
+No
+- unanswered
+
+G. Which of the following route advertisements does AS2 receive for prefixes in AS5?
+19.15.0.0/16 AS3 AS4
+19.15.0.0/16 AS4 AS5
+19.15.0.0/16 AS3 AS4 AS5
+19.16.0.0/16 AS5
+19.16.0.0/16 AS4 AS5
+19.16.0.0/16 AS3 AS4 AS5
+- unanswered
+
+H. If AS5 uses the Routing Internet Protocol (RIP) to route packets between routers R7 – R11 and B8, how many steps will Bellman Ford algorithm need to run in order to be sure the algorithm will converge?
+2
+3
+4
+5
+6
+- unanswered
+
+I. Which of the following statements are true for the network as a whole?
+Packets from X to Y are guaranteed to take the same path as packets from Y to X.
+IP datagrams from X to Y will be transmitted with destination IP address of R4 and encapsulated in an Ethernet frame with destination Ethernet address of B.
+IP datagrams from X to Y will be transmitted with destination IP address of Y and encapsulated in an Ethernet frame with destination Ethernet address of R4.
+If an IP datagram with destination address 19.15.1.4 arrives to E, and is encapsulated in an Ethernet frame with destination address of R4, then the switches and routers will attempt to forward the packet via several hops to AS5.
+- unanswered
+V. CSMA/CD
+
+A. A CSMA/CD network operates at 100Mb/s. The maximum distance between any pair of end hosts is 10km. What is the minimum size packet a host should send in order to detect collisions before it finishes transmitting the packet? Assume a propagation speed of 2 x 10^8m/s.
+100 bits.
+10,000 bits
+53 bytes
+2,000 bits
+- unanswered
+
