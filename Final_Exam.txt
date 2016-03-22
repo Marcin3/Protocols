@@ -4,24 +4,21 @@ I. The Chewy Center of the Internet
 Recall that the count­-to-­infinity problem in distance vector routing is when a change in the topology causes/powoduje/ nodes to form a loop. The nodes break out of the loop only once their costs count high enough to choose a different route.
 
 A. Can decreasing the routing cost of a link cause the count-to-infinity problem?
-Yes, a decreasing link cost can cause the count­-to-infinity problem.
-No, a decreasing link cost cannot cause the count­-to-infinity problem.
-- unanswered
+- Yes, a decreasing link cost can cause the count­-to-infinity problem. 	
+- No, a decreasing link cost cannot cause the count­-to-infinity problem. TRUE
 
 B. Can removing a link cause the count-to-infinity problem?
-Yes, removing a link can cause the count-to-infinity problem
+Yes, removing a link can cause the count-to-infinity problem TRUE
 No, removing a link cannot cause the count-to-infinity problem
-- unanswered
 
 C. Can increasing the routing cost of a link cause the count­-to-­infinity problem?
-Yes, increasing the routing cost of a link can cause the count­-to-­infinity problem.
+Yes, increasing the routing cost of a link can cause the count­-to-­infinity problem. TRUE
 No, increasing the routing cost of a link cannot cause the count­--to­-infinity problem.
-- unanswered
 
 D. Can removing a vertex from the graph cause the count­-to-­infinity problem?
-Yes, removing a vertex from the graph can cause the count-­to-infinity problem.
+Yes, removing a vertex from the graph can cause the count-­to-infinity problem. TRUE
 No, removing a vertex from the graph cannot cause the count-­to-infinity problem.
-- unanswered
+
 
 E. Recall that BGP uses a modification of distance vector routing called path vector routing. where route advertisements include the full AS path. Can a router detect some potential routing loops by examining only a path vector?
 Yes, using only a path vector a router can detect some loops.
