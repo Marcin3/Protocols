@@ -25,7 +25,7 @@ Yes, using only a path vector a router can detect some loops.
 No, a path vector alone has insufficient information to detect any loops.
 - unanswered
 
-F. An AS chooses to route packets for a specific prefix to another AS based on the path this second AS advertised for that prefix. Is it assured that all packets to that prefix will follow that advertised AS path to the destination?
+F. An AS (Autonomous System) chooses to route packets for a specific prefix to another AS based on the path this second AS advertised for that prefix. Is it assured that all packets to that prefix will follow that advertised AS path to the destination?
 Yes, all packets sent to that prefix will traverse the AS path the other AS advertised.
 No, packets sent to that prefix may traverse a different AS path.
 - unanswered
