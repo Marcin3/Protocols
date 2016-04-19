@@ -61,7 +61,7 @@ What is the maximum rate achievable by the sender?Which of the following stateme
 ~98Mb/s
 ~0.83Gb/s
 ~980Mb/s
-- unanswered
+
 II. What's in a Name?
 
 A. Suppose you query a root name server for an A record for www.facebook.com. What is the most likely reply?
@@ -111,15 +111,14 @@ Jon Postel didn't want any responsibility but everyone else wanted him in charge
 III. Here, There, Everwhere
 
 A. Which of the following CIDR blocks cover the address 171.15.66.234?  Check all that apply.
-128.0.0.0/1
-128.0.0.0/2
-171.15.0.0/16
-171.15.0.0/17
-171.15.0.0/18
-171.16.55.128/26
+128.0.0.0/1 		TRUE
+128.0.0.0/2		TRUE
+171.15.0.0/16		TRUE
+171.15.0.0/17		TRUE
+171.15.0.0/18		
+171.16.55.128/26	
 171.15.66.0/28
-171.15.66.234/32
-- unanswered
+171.15.66.234/32	TRUE
 
 B. True or false: IPv6 addresses are in short supply.
 True  
@@ -128,23 +127,22 @@ False Correct
 
 C. True or false: using DHCP is the only way for a host to obtain an IP address today in the Internet.
 True
-False
-- unanswered
+False Corect
+
 
 D. True or false: because it uses a link layer broadcast, in order  to receive a response a node  using DHCP must be on the same  link as its DHCP server.
 True
-False
-- unanswered
+False	Correct
+
 
 E. True or false: because DHCP uses link ­layer broadcasts, the IP gateway for a subnet must also be a DHCP server.
-True
+True	Correct
 False
-- unanswered
 
 F. DHCP is a layer 3 (network layer) protocol
 True
-False
-- unanswered
+False	Correct
+
 
 G. Mark all of the following that are syntactically valid IPv6 addresses:
 2001:470::806d:1::9		FALSE 
@@ -153,28 +151,31 @@ G. Mark all of the following that are syntactically valid IPv6 addresses:
 dead:beef:10:10.44.12.22::9	FALSE
 fe80::6aa8:6dff:fe05:8522	TRUE
 fe80::213:72ff:fe4c:d96a	TRUE
-- unanswered
+
 
 H. True or false: It is considered good practice for Network Address Translators to map a single external IP/port pair to multiple internal IP/port pairs.
-True
+True 	Correct
 False
-- unanswered
+http://serverfault.com/questions/451022/nat-network-address-translator-and-mapping-ip-port-pair
 
 I. True or false: Network Address Translators cannot be layered. I.e., if you have two layers of NAT between a pair of hosts, all IP communication will break.
-True
-False
-- unanswered
+True		
+False		TRUE
+
 IV. Getting from Here to There
 
 A. The next questions are based on the figure of the network below  connecting AS1, AS2, AS3, AS4 and AS5. 
-End host X connects to Ethernet switch B (e.g. in the wiring closet of a building which in turn connect to the routers inside  AS1 (e.g. campus backbone routers), which in turn connects to the public  Internet provider AS2 via BGP router B1.
+End host X connects to Ethernet switch B (e.g. in the wiring closet of a building which in turn connect to the routers inside  AS1 
+(e.g. campus backbone routers), which in turn connects to the public  Internet provider AS2 via BGP router B1.
 
-B. If Ethernet switches A-­F run the Spanning Tree Protocol (remember all links have the same cost), and A is the root of the spanning tree, which of the following statements are true?
-Packets from X to Y will travel along the path B­A­D. B­C­D is not part of the spanning tree rooted at A, and so packets will flow via A.
-Packets from A­D will travel indefinitely around the loop A­D­E­F­A, unless the TTL expires.
-If switch A fails, X will no longer be able to communicate with Y.
-All of the links between the switches will be used to forward regular data packets.
-A-­F will learn link state information from routers R1­R6 and optimize the spanning tree between the switches accordingly.
+B. If Ethernet switches A-­F run the Spanning Tree Protocol (remember all links have the same cost), 
+and A is the root of the spanning tree, which of the following statements are true?
+
+Packets from X to Y will travel along the path B­A­D. B­C­D is not part of the spanning tree rooted at A, and so packets will flow via A. TRUE
+Packets from A­D will travel indefinitely around the loop A­D­E­F­A, unless the TTL expires.		FALLS
+If switch A fails, X will no longer be able to communicate with Y.			 	FALLS
+All of the links between the switches will be used to forward regular data packets.		FALSE
+A-­F will learn link state information from routers R1­R6 and optimize the spanning tree between the switches accordingly. FALSE
 - unanswered
 
 C. AS1 uses OSPF to route packets internally using the link weights shown.  
@@ -182,51 +183,57 @@ BGP router B1 also  takes part in the OSPF routing algorithm for AS1.
 
 D. Assume the link from R4­R3 fails, what is the shortest path now from R4 to B1?
 R4­-R5-­R3-­B1
-R4­-R2-­R1-­B1
+R4­-R2-­R1-­B1 TRUE
 R4-R6-R5-R3-B1
 R4-R2-R1-R3-B1
 R4-R5-R3-R1-B1
-- unanswered
+
 
 E. If AS1 uses default routing, do routers R1-R6 contain separate routing entries for prefixes in AS4 and AS5?
-Yes
+Yes TRUE
 No
-- unanswered
+
 
 F. Can B7 aggregate prefixes for AS5 before advertising them to AS3 and AS2?
-Yes
+Yes TRUE
 No
-- unanswered
+
 
 G. Which of the following route advertisements does AS2 receive for prefixes in AS5?
-19.15.0.0/16 AS3 AS4
-19.15.0.0/16 AS4 AS5
-19.15.0.0/16 AS3 AS4 AS5
-19.16.0.0/16 AS5
-19.16.0.0/16 AS4 AS5
-19.16.0.0/16 AS3 AS4 AS5
+19.15.0.0/16 AS3 AS4			FALSE
+19.15.0.0/16 AS4 AS5			TRUE
+19.15.0.0/16 AS3 AS4 AS5		TRUE
+19.16.0.0/16 AS5			FALSE
+19.16.0.0/16 AS4 AS5			TRUE
+19.16.0.0/16 AS3 AS4 AS5		TRUE
 - unanswered
 
-H. If AS5 uses the Routing Internet Protocol (RIP) to route packets between routers R7 – R11 and B8, how many steps will Bellman Ford algorithm need to run in order to be sure the algorithm will converge?
+H. If AS5 uses the Routing Internet Protocol (RIP) to route packets between routers R7 – R11 and B8, 
+how many steps will Bellman Ford algorithm need to run in order to be sure the algorithm will converge?
 2
 3
 4
-5
+5 TRUE
 6
 - unanswered
 
 I. Which of the following statements are true for the network as a whole?
-Packets from X to Y are guaranteed to take the same path as packets from Y to X.
+Packets from X to Y are guaranteed to take the same path as packets from Y to X. TRUE
 IP datagrams from X to Y will be transmitted with destination IP address of R4 and encapsulated in an Ethernet frame with destination Ethernet address of B.
-IP datagrams from X to Y will be transmitted with destination IP address of Y and encapsulated in an Ethernet frame with destination Ethernet address of R4.
+IP datagrams from X to Y will be transmitted with destination IP address of Y and encapsulated in an Ethernet frame with destination Ethernet address of R4.TRUE
 If an IP datagram with destination address 19.15.1.4 arrives to E, and is encapsulated in an Ethernet frame with destination address of R4, then the switches and routers will attempt to forward the packet via several hops to AS5.
 - unanswered
-V. CSMA/CD
 
-A. A CSMA/CD network operates at 100Mb/s. The maximum distance between any pair of end hosts is 10km. What is the minimum size packet a host should send in order to detect collisions before it finishes transmitting the packet? Assume a propagation speed of 2 x 10^8m/s.
+
+V. CSMA/CD
+A. A CSMA/CD network operates at 100Mb/s. The maximum distance between any pair of end hosts is 10km. 
+What is the minimum size packet a host should send in order to detect collisions before it finishes transmitting the packet? 
+Assume a propagation speed of 2 x 10^8m/s.
+R = 100Mb/s,    L =  10,000m,    c=2 x 10^8m/s.   
+Pmin=2LR/c=(2*100*10^6 *10,000)/2x10^8=10000bits
 100 bits.
-10,000 bits
+10,000 bits TRUE
 53 bytes
 2,000 bits
-- unanswered
+
 
